@@ -4,7 +4,7 @@ import { CreateUserDto } from 'src/dto/user.dto';
 import { MongoRepository } from 'typeorm';
 import { User } from './user.entity';
 
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(
     @InjectRepository(User)

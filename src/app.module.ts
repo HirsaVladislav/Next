@@ -12,11 +12,13 @@ import { UserModule } from './user/user.module';
     TypeOrmModule.forRoot({
       type: 'mongodb',
       url: 'mongodb://root:example@localhost:27017',
-      database: 'tasks',
+      // database: 'tasks',
       entities: [User],
       // ssl: true,
       useUnifiedTopology: true,
       useNewUrlParser: true,
+      autoLoadEntities: true,
+      synchronize: true,
       logging: true
     }),
     TypeOrmModule.forFeature([User]),
